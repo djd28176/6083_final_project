@@ -108,7 +108,6 @@ if plate_number:
     """
     try:
         car_info = query_db(sql_plate).loc[0]
-        print(car_info)
 
         car_owner_first, car_owner_last, owner_number = (car_info["first_name"], car_info["last_name"], car_info["contact_number"])
         st.write(f"{plate_number} belongs to {car_owner_first} {car_owner_last}, the phone number is {owner_number}.")
@@ -128,7 +127,6 @@ if apart_id:
         ORDER BY T.first_name, T.last_name;"""
     try:
         ap_info = query_db(sql_find_tenant_apart_id).loc[0]
-        print("ap_info:::",ap_info)
         ap_first, ap_last, ap_number = (ap_info["first_name"], ap_info["last_name"], ap_info["contact_number"])
         st.write(f"{apart_id}'s tenant is {ap_first} {ap_last}, the phone number is {ap_number}.")
     except:
