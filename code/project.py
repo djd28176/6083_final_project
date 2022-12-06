@@ -253,7 +253,7 @@ if whether.lower() == "yes":
 triggerlist = ["Show","Hide"]
 trigger = st.selectbox("Choose Show or Hide", triggerlist)
 if trigger.lower() == "hide":
-    st.write("You choose not to look for thisss query.")
+    st.write("You choose not to look for this query.")
 if trigger.lower() == "show":
     sql_pair = f"""
         Select (T1.first_name , T1.last_name) as Tenant_has_car, (T2.first_name , T2.last_name) as Tenant_has_no_car 
